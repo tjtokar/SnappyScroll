@@ -2,7 +2,7 @@ $.fn.snappyScroll = function(scrollDuration, startAtTop) {
 	
 	var activeSection = 0;
 	var isAnimating = false;
-	var lastLayer = parseInt($(".layer").length) + 1;
+	var lastLayer = parseInt($(".layer").length) - 1;
 	
 	function layerChecker(){
 		var layerCounter = 1;
