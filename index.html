@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Snappy Scroll</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/example.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+  <div class="wrapper">
+    <section class="layer">Layer 1</section>
+    <section class="layer">Layer 2</section>
+    <section class="layer">Layer 3</section>
+    <section class="layer">Layer 4</section>
+    <section class="layer">Layer 5</section>
+  </div> 
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery.snappy.js"></script>
+    <script>
+    	$(document).ready( function(){
+	    	$("body").snappyScroll(3000);
+    	});
+    </script>
+    
+  </body>
+</html>
