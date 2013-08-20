@@ -2,7 +2,7 @@ $.fn.snappyScroll = function(scrollDuration, startAtTop) {
 	
 	var activeSection = 0;
 	var isAnimating = false;
-	var lastLayer = parseInt($(".layer").length);
+	var lastLayer = parseInt($(".layer").length) - 1;
 	
 	function layerChecker(){
 		var layerCounter = 1;
@@ -60,19 +60,22 @@ $.fn.snappyScroll = function(scrollDuration, startAtTop) {
 	        return false;
         }
         
+        console.log( activeSection );
+        console.log( lastLayer );
+        
         if( activeSection > lastLayer ){
 	        activeSection = lastLayer;
 	        return false;
         }
+		
+		
+		
 		
 		if( direction == "down") {
 			nextLayer = $(".layer[data-start=start]").removeAttr('data-start').next().offset().top;
 		} else {
 			nextLayer = $(".layer[data-start=start]").removeAttr('data-start').prev().offset().top;
 		}
-		console.log(event.wheelDelta);
-		
-		
 		
 		scrollToSection(nextLayer);
 	}
